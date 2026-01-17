@@ -69,5 +69,22 @@ services:
       - ./services/finance-service:/app
     command: uvicorn main:app --host 0.0.0.0 --port 8002 --reload
 
+  # Frontend (React)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: outa-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - auth-service
+      - finance-service
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost
+
 volumes:
   postgres_data:

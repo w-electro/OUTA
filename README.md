@@ -26,11 +26,18 @@ docker-compose down
 
 Once running, access:
 
-- **Auth Service**: http://localhost:8001
+- **🎨 Frontend (React UI)**: http://localhost:3000 **← START HERE!**
+  - Beautiful modern dashboard
+  - User login and registration
+  - Invoice creation and management
+  - ZATCA submission workflow
+  - Real-time updates
+
+- **Auth Service API**: http://localhost:8001
   - API Docs: http://localhost:8001/docs
   - Health: http://localhost:8001/health
 
-- **Finance Service**: http://localhost:8002
+- **Finance Service API**: http://localhost:8002
   - API Docs: http://localhost:8002/docs
   - Health: http://localhost:8002/health
 
@@ -42,6 +49,17 @@ Once running, access:
 - **Redis**: localhost:6379
 
 ## 📋 Features Implemented
+
+### ✅ React Frontend (NEW!)
+- Modern, responsive UI with Tailwind CSS
+- User authentication (login/register)
+- Dashboard with stats and quick actions
+- Invoice management interface
+- Create invoices with multiple line items
+- Approve invoices
+- Submit to ZATCA
+- Real-time invoice tracking
+- Beautiful, intuitive design
 
 ### ✅ Authentication Service
 - User registration
